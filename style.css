@@ -1,0 +1,140 @@
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+body {
+  background: #ffd901;
+  color: #132e91;
+  font-family: 'Amatic SC', curgit agit sive;
+  font-size: 40px;
+  font-weight: lighter;
+
+
+
+}
+
+.image {
+  transition: transform 0.3s ease;
+}
+
+
+.image:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.card-pink {
+  background-color: lightpink;
+  padding: 40px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.list-inline li:hover {
+  opacity: 1;
+}
+
+
+.list-inline {
+  display: flex;
+  padding: 0px 100px;
+  justify-content: center;
+
+}
+
+.list-inline li {
+  margin-right: 10px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+
+ul {
+  display:inline-block ;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  list-style-type: none;
+}
+
+#green-text {
+  color: green
+}
+
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
+
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(100px, 100px) rotate(45deg);
+  }
+  100% {
+    transform: translate(-100px, -100px) rotate(-45deg);
+  }
+}
+
+
+
+.floating-text-container {
+  display: inline-block;
+  animation: float 5s infinite ease-in-out;
+}
+
+.list-inline li:hover {
+  animation: none; /* Disable animation on hover */
+}
+
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    font-size: 0;
+  }
+  50% {
+    opacity: 1;
+    font-size: 60px;
+  }
+  100% {
+    opacity: 1;
+    font-size: 60px;
+  }
+}
+
+#intro-text {
+  animation: textAnimation 3s forwards;
+  animation-delay: 1s;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0;
+}
